@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+	<h1>ZA BOOKS!</h1>
+		<form action="/books/results" method="GET">
+			<div class="form-inline">
+				<label for="title">Title</label>
+				<input type="text" name="title" id="title" class="form-control" autofocus>
+				<input type="submit" class="btn btn-primary">
+			</div>
+		</form>
+
+<% books.forEach(function(book) { %>
+	<table class="table table-striped table-hover">
+		<tr>
+			<td><%= book.title %></td>
+			<td><%= book.authors %></td>
+			<td><%= book.authors %></td>
+<% }) %>
+		</tr>
+	</table>
+
+<% include ../partials/footer %>
